@@ -7,18 +7,22 @@ class FilaBase:
     clientes_atendidos: list[str] = []
     senha_atual: str = ""
     
+    def atualizar_fila(self) -> None:
+        self.resetar_fila()
+        self.gerar_senha()
+        self.inserir_cliente()
+    
     def resetar_fila(self) -> None:
         if self.codigo >= 100:
             self.codigo = 0
         else:
             self.codigo += 1
     
-    @abc.abstractmethod
-    def gerar_senha(self) -> None:
-        ...
+    def inserir_cliente(self):
+        self.fila.append(self.senha_atual)
     
     @abc.abstractmethod
-    def atualizar_fila(self) -> None:
+    def gerar_senha(self) -> None:
         ...
         
     @abc.abstractmethod
