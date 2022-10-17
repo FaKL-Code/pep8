@@ -1,7 +1,7 @@
 class FilaPrioritaria:
     codigo: int = 0
-    fila = []
-    clientes_atendidos = []
+    fila: list[str] = []
+    clientes_atendidos: list[str] = []
     senha_atual: str = ""
     
     def gerar_senha(self) -> None:
