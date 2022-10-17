@@ -1,6 +1,6 @@
 import abc
 
-from PEP8.const import TAMANHO_PADRAO_MAX, TAMANHO_PADRAO_MIN
+from const import TAMANHO_PADRAO_MAX, TAMANHO_PADRAO_MIN
 
 
 class FilaBase:
