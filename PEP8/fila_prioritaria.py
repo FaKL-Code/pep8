@@ -1,8 +1,9 @@
 from fila_base import FilaBase
+from const import CODIGO_PRIORITARIO
 
 class FilaPrioritaria(FilaBase):
     def gerar_senha(self) -> None:
-        self.senha_atual = f'PR{self.codigo}'
+        self.senha_atual = f'{CODIGO_PRIORITARIO}{self.codigo}'
         
     def chamar_cliente(self, caixa:int) -> str:
         cliente_atual = self.fila.pop(0)

@@ -1,8 +1,10 @@
 import abc
 
+from PEP8.const import TAMANHO_PADRAO_MAX, TAMANHO_PADRAO_MIN
+
 
 class FilaBase:
-    codigo: int = 0
+    codigo: int = TAMANHO_PADRAO_MIN
     fila: list[str] = []
     clientes_atendidos: list[str] = []
     senha_atual: str = ""
@@ -13,7 +15,7 @@ class FilaBase:
         self.inserir_cliente()
     
     def resetar_fila(self) -> None:
-        if self.codigo >= 100:
+        if self.codigo >= TAMANHO_PADRAO_MAX:
             self.codigo = 0
         else:
             self.codigo += 1
